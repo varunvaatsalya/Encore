@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Portal</title>
+    <style>
+        /*
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Ephesis', cursive;
+        font-family: 'Charm', cursive;
+        font-family: 'Leckerli One', cursive;
+        font-family: 'Satisfy', cursive;
+        font-family: 'Bad Script', cursive;
+        */
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Charm&family=Leckerli+One&family=Open+Sans:wght@300&family=Satisfy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Marhey", sans-serif;
+            font-size: 20px;
+
+        }
+
+
+        header {
+            background-color: #0000006c;
+            font-family: "Marhey", sans-serif;
+        }
+
+        .logoDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .logo {
+            max-width: 150px;
+        }
+
+        header li {
+            list-style: none;
+            font-size: 19px;
+            font-family: "Marhey", sans-serif;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 19px;
+            font-family: "Marhey", sans-serif;
+            padding: 8px 16px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+        }
+
+        a:hover {
+            color: orange;
+        }
+
+        header {
+            position: relative;
+            padding: 0 32px;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 75px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .navbar .toggle_btn {
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .action_btn {
+            background-color: rgba(0, 0, 0, 0.273);
+            font-family: "Marhey", sans-serif;
+            color: rgb(255, 248, 125);
+            padding: 8px 16px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 19px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .action_btn:hover {
+            scale: 1.05;
+            color: #fff;
+        }
+
+        .action_btn:active {
+            scale: 0.95;
+        }
+
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            right: 32px;
+            top: 60px;
+            height: 0;
+            width: 300px;
+            background: rgba(0, 0, 0, 0.321);
+            backdrop-filter: blur(12px);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 3;
+        }
+
+        .dropdown_menu.open {
+            height: 240px;
+        }
+
+        .dropdown_menu li {
+            padding: 5px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown_menu .action_btn {
+            width: 100%;
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.536);
+            color: rgb(255, 248, 125);
+            justify-content: center;
+        }
+
+        .dropdown_menu .dd_btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff00;
+        }
+
+
+        @media(max-width: 992px) {
+
+            .navbar .links,
+            .navbar .action_btn {
+                display: none;
+            }
+
+            .navbar .toggle_btn {
+                display: block;
+            }
+
+            .dropdown_menu {
+                display: block;
+
+            }
+        }
+
+        @media (max-width: 576px) {
+            .dropdown_menu {
+                left: 32px;
+                width: unset;
+            }
+        }
+
+        /*Form starts*/
+
+        form {
+            padding: 6vh 5vw;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            margin: auto;
+            width: 95vw;
+            margin-top: 6vh;
+        }
+
+        .inputcontainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .input {
+            display: inline-block;
+        }
+
+        .label {
+            display: inline-block;
+            margin: 0;
+            margin-right: 16px;
+            padding: 12px 0;
+            width: 30%;
+            box-sizing: border-box;
+            color: white;
+            text-align: left;
+            text-shadow: 2px 2px 6px black;
+        }
+
+        .inputtextbox {
+            border: 0px;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 0.125em 0.3125em rgba(black, 0.3);
+            color: black;
+            box-sizing: border-box;
+            font-size: 16px;
+            padding: 8px;
+            max-width: 210px;
+            min-height: 40px;
+        }
+
+        .dropdown {
+            max-width: 210px;
+            min-height: 40px;
+        }
+
+        .regButton {
+            padding: 6px 10px; 
+            background-color: white;
+            color: black;
+            border: 0px;
+            border-radius: 12px;
+        }
+
+        .register {
+            width: 60vw+8px;
+            display: flex;
+            justify-content: center;
+            margin: 5vh;
+            margin-bottom: 0;
+        }
+
+        .background {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-image: url(res/bg.jpg);
+            min-height: 100vh;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <header>
+            <div class="navbar">
+                <div class="logoDiv"><img src="res/logo.png" alt="logo" class="logo"></div>
+                <ul class="links">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/events">Events</a></li>
+                    <li><a href="/sponsor">Sponsors</a></li>
+                </ul>
+                <a href="/login" class="action_btn">Login</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        
+            <div class="dropdown_menu">
+                <li><a href="/home" class="dd_btn">Home</a></li>
+                <li><a href="/events" class="dd_btn">Events</a></li>
+                <li><a href="/sponsor" class="dd_btn">Sponsors</a></li>
+                <li><a href="/login" class="action_btn">Login</a></li>
+            </div>
+        </header>
+
+        <form action="/caportal" method="POST">
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="username">Name</label>
+                </div>
+                <div class="input textbox username">
+                    <input type="text" name="username" placeholder="Enter your name" class="inputtextbox">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="refcode">Referal</label>
+                </div>
+                <div class="input text referal">
+                    <input type="text" name="refcode" class="inputtextbox" placeholder="Enter referal code">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="password">Password</label>
+                </div>
+                <div class="input password password">
+                    <input type="password" name="password" class="inputtextbox" placeholder="Enter the password">
+                </div>
+            </div>
+            <div class="register">
+                <button type="submit" class="regButton">Login</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnTcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+        }
+    </script>
+</body>
+
+</html>
