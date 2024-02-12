@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <style>
                 /*
         font-family: 'Open Sans', sans-serif;
@@ -246,6 +247,11 @@
             margin: 5vh;
             margin-bottom: 0;
         }
+        .messege{
+            color: red;
+            width: 100%;
+            text-align: center;
+        }
 
         .background {
             margin: 0;
@@ -269,6 +275,7 @@
                     <li><a href="/home">Home</a></li>
                     <li><a href="/caportal">CA Portal</a></li>
                     <li><a href="/sponsor">Sponsors</a></li>
+                    <li><a href="/events">Events</a></li>
                 </ul>
                 <a href="/login" class="action_btn">Login</a>
                 <div class="toggle_btn">
@@ -340,10 +347,10 @@
             </div>
             <div class="inputcontainer">
                 <div class="label">
-                    <label for="userid">User id</label>
+                    <label for="email">Email</label>
                 </div>
                 <div class="input text userid">
-                    <input type="text" name="userid" placeholder="Create a user id" class="inputtextbox" required>
+                    <input type="text" name="email" placeholder="enter the Email" class="inputtextbox" required>
                 </div>
             </div>
             <div class="inputcontainer">
@@ -362,6 +369,7 @@
                     <input type="password" name="confpassword" class="inputtextbox" required>
                 </div>
             </div>
+            <div class="messege">this email is already registered</div>
             <div class="register">
                 <button type="submit" class="regButton">Register!</button>
             </div>
@@ -369,6 +377,13 @@
     </div>
     <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
     <script>
+        let isRegistered = '<%=alreadyRegistered%>';
+        if(isRegistered=='true'){
+            document.getElementsByClassName('messege')[0].style.display = 'block';
+        }
+        else{
+            document.getElementsByClassName('messege')[0].style.display = 'none';
+        }
     
         const toggleBtn = document.querySelector('.toggle_btn')
         const toggleBtnTcon = document.querySelector('.toggle_btn i')
