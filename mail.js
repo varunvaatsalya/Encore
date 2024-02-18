@@ -4,13 +4,13 @@ async function sendMail(name, email) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "",  //encore email
-      pass: "",  //generated password
+      user: "encore@ietlucknow.ac.in",  //encore email
+      pass: "mofvhrfzjolnsvub",  //generated password
     },
   });
 
   let mailOptions = {
-    from: "'Encore | IET Lucknow', varunvaatsalya@gmail.com",
+    from: "'Encore | IET Lucknow', encore@ietlucknow.ac.in",
     to: email,
     subject: "Welcome to the Encore",
     text: `hii ${name},

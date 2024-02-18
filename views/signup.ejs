@@ -213,6 +213,15 @@
             text-align: left;
             text-shadow: 2px 2px 6px black;
         }
+        .terms{
+            display: inline-block;
+            padding: 12px 0;
+            width: 80%;
+            box-sizing: border-box;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 6px black;
+        }
 
         .inputtextbox {
             border: 0px;
@@ -262,6 +271,13 @@
             background-image: url(res/bg.jpg);
             min-height: 100vh;
             padding-bottom: 6vh;
+        }
+        input[type="checkbox"] {
+           transform: scale(2);
+           margin-right: 10px;
+        }
+        .link{
+           color: rgb(91, 91, 255);
         }
     </style>
 </head>
@@ -369,6 +385,13 @@
                     <input type="password" name="confpassword" class="inputtextbox" required>
                 </div>
             </div>
+            <div class="inputcontainer">
+                <div class="terms">
+                    <input type="checkbox" id="t&c" name="t&c" class="t&c" value="t&c" required>
+                    <label for="t&c">I agreed the <a class="link" href="/">terms and condition</a></label><br>
+                </div>
+            </div>
+            
             <div class="messege">this email is already registered</div>
             <div class="register">
                 <button type="submit" class="regButton">Register!</button>

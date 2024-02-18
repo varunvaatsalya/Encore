@@ -166,7 +166,7 @@ app.post("/signup", async (req, res) => {
       confpassword,
     });
     await user.save();
-    // sendMail(name, email);
+    sendMail(name, email);
     res.cookie("uid", user._id);
     res.render("after-reg");
   }
