@@ -149,7 +149,7 @@ app.post("/signup", async (req, res) => {
     password,
     confpassword,
   } = req.body;
-  // console.log(email, name);
+  console.log(email, name);
   let foundUser = await collection.findOne({ email: email });
   if (foundUser) {
     res.render("signup", { alreadyRegistered: true });
