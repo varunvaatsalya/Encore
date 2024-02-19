@@ -1,0 +1,76 @@
+function regMailpage(name) {
+  return `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to the Encore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .email-container {
+        /* background-color: blueviolet; */
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .logo {
+        margin-bottom: 0px;
+      }
+      .heading {
+        margin: 10px auto;
+        font-weight: 500;
+      }
+      .name {
+        color: blue;
+      }
+      .content {
+        color: rgb(105, 105, 105);
+      }
+      .Greetings {
+        margin-bottom: 40px;
+      }
+      .top {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="logo">
+        <img src="https://drive.google.com/thumbnail?id=1v9L23B_0166q6iQKSZCKpN3id3zBbLBx" alt="err" height="100px" />
+      </div>
+      <div class="main">
+        <p class="heading">Dear <span class="name">${name}</span></p>
+        <p class="Greetings content">Greetings from the Encore | IET Lucknow</p>
+        <div class="content">
+          Congratulations, Your registration has been successfully received, and
+          we can't wait to see you there for the Encore'24.
+        </div>
+        <div class="content">
+          We will be sharing more details on our
+          <a class="link" href="https://www.instagram.com/encore.iet">Instagram page</a>
+           about the schedule, speakers, and any additional information.
+        </div>
+
+        <div class="top content">
+          <div>Best regards,</div>
+          <div>team Encore</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+`;
+}
+
+module.exports = regMailpage;

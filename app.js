@@ -89,7 +89,7 @@ app.get("/profile", async (req, res) => {
     foundUser = await collection.findOne({ _id: cookieId });
   }
   if (foundUser) {
-    let refcode = "-";
+    let refcode = "College Student";
     if (foundUser.refcode) refcode = "campus Ambassador";
     res.render("profile.ejs", {
       name: foundUser.name,

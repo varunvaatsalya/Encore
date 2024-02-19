@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+const regMailpage = require("./RegmailPage");
 
 async function sendMail(name, email) {
   const transporter = nodemailer.createTransport({
@@ -13,9 +14,7 @@ async function sendMail(name, email) {
     from: "'Encore | IET Lucknow', encore@ietlucknow.ac.in",
     to: email,
     subject: "Welcome to the Encore",
-    text: `hii ${name},
-              greeting from Encore, IET Lucknow!
-              congratulations, you have sucessfully registered for the Encore`,
+    html: regMailpage(name),
   };
 
   await transporter.sendMail(mailOptions, function (err, info) {
