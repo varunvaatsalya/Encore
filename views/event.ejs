@@ -1,80 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Showcase</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Charm&family=Leckerli+One&family=Open+Sans:wght@300&family=Satisfy&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Charm&family=Leckerli+One&family=Open+Sans:wght@300&family=Satisfy&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Ephesis&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-        body {
-            font-family: "Montserrat", sans-serif;
-            font-optical-sizing: auto;
-            margin: 0;
-            padding: 0;
-            background-image: url(res/bg.jpg);
-            position: relative;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            min-height: 100vh;
-            background-position: center;
-        }
-        h2{
-            font-weight: 600;
-        }
-        h3{
-            font-weight: 200;
-        }
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        margin: 0;
+        padding: 0;
+        background-image: url(res/bg.jpg);
+        position: relative;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        background-position: center;
+      }
+      h2 {
+        font-weight: 600;
+      }
+      h3 {
+        font-weight: 200;
+      }
 
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+      }
 
-        .event-card {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.504);
-            overflow: hidden;
-            border-radius: 8px;
-        }
+      .event-card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.504);
+        overflow: hidden;
+        border-radius: 8px;
+      }
 
-        .event-card img {
-            width: 100%;
-            height: auto;
-        }
+      .event-card img {
+        width: 100%;
+        height: auto;
+      }
 
-        .event-card-content {
-            padding: 20px;
-            background-color: #252525;
-            color: #fff;
-        }
+      .event-card-content {
+        padding: 20px;
+        /* background-color: #252525; */
+        /* background-image: linear-gradient(135deg, #444e59 10%, #252525 100%); */
+        /* background-image: linear-gradient(135deg, #29323c 10%, #485563 100%); */
+        background-image: linear-gradient(135deg, #191c26 10%, #1f1f34 100%);
+        color: #fff;
+      }
 
-        .event-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+      .event-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
 
-        .event-description {
-            margin-bottom: 15px;
-        }
+      .event-description {
+        margin-bottom: 15px;
+      }
 
-        .read-more {
+      /* .read-more {
             display: inline-block;
             padding: 8px 16px;
             background-color: #3498db;
@@ -85,439 +95,589 @@
 
         .read-more:hover{
             color: #fff;
-        }    
-
-        header {
-            background-color: #0000006c;
-            font-family: "Marhey", sans-serif;
+        }     */
+      .read-more {
+        display: inline-block;
+        padding: 12px 24px;
+        /* background-color: #3498db; */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient(135deg, #209cff 10%, #68e0cf 100%);
+          z-index: -2;
         }
-
-        .logoDiv {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px;
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 100%;
+          background-image: linear-gradient(135deg, #83eaf1 10%, #63a4ff 100%);
+          transition: all 0.3s;
+          z-index: -1;
         }
-
-        .logo {
-            max-width: 150px;
-        }
-
-        header li {
-            list-style: none;
-            font-size: 1.2rem;
-            font-family: var(--main-font);
-        }
-
-        header a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2rem;
-            font-family: var(--main-font);
-            font-weight: var(--main-weight-a);
-            padding: 0.5rem 1rem;
-            border: none;
-            outline: none;
-            border-radius: 20px;
-        }
-
-        a:hover {
-            color: orange;
-        }
-
-        header {
-            position: relative;
-            padding: 0 2rem;
-        }
-
-        .navbar {
+        &:hover {
+          color: #fff;
+          &:before {
             width: 100%;
-            height: 75px;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+          }
         }
+      }
 
-        .navbar .links {
-            display: flex;
-            gap: 2rem;
+      header {
+        background-color: #0000006c;
+        font-family: "Marhey", sans-serif;
+      }
+
+      .logoDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+      }
+
+      .logo {
+        max-width: 150px;
+      }
+
+      header li {
+        list-style: none;
+        font-size: 1.2rem;
+        font-family: var(--main-font);
+      }
+
+      header a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        font-family: var(--main-font);
+        font-weight: var(--main-weight-a);
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+      }
+
+      a:hover {
+        color: orange;
+      }
+
+      header {
+        position: relative;
+        padding: 0 2rem;
+      }
+
+      .navbar {
+        width: 100%;
+        height: 75px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .navbar .links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .navbar .toggle_btn {
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+      }
+
+      .action_btn {
+        background-color: rgba(0, 0, 0, 0.273);
+        font-family: var(--main-font);
+        color: rgb(255, 248, 125);
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .action_btn:hover {
+        scale: 1.05;
+        color: #fff;
+      }
+
+      .action_btn:active {
+        scale: 0.95;
+      }
+
+      .dropdown_menu {
+        display: none;
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        height: 0;
+        width: 300px;
+        background: rgba(255, 255, 255, 0.021);
+        backdrop-filter: blur(12px);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 3;
+      }
+
+      .dropdown_menu.open {
+        height: 240px;
+      }
+
+      .dropdown_menu li {
+        padding: 5px 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dropdown_menu .action_btn {
+        width: 100%;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.536);
+        color: rgb(255, 248, 125);
+        justify-content: center;
+      }
+
+      .dropdown_menu .dd_btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #ffffff00;
+      }
+
+      @media (max-width: 992px) {
+        .navbar .links,
+        .navbar .action_btn {
+          display: none;
+        }
+        .read-more{
+          padding: 12px 30px;
         }
 
         .navbar .toggle_btn {
-            color: #fff;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: none;
-        }
-
-        .action_btn {
-            background-color: rgba(0, 0, 0, 0.273);
-            font-family: var(--main-font);
-            color: rgb(255, 248, 125);
-            padding: 0.5rem 1rem;
-            border: none;
-            outline: none;
-            border-radius: 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .action_btn:hover {
-            scale: 1.05;
-            color: #fff;
-        }
-
-        .action_btn:active {
-            scale: 0.95;
+          display: block;
         }
 
         .dropdown_menu {
-            display: none;
-            position: absolute;
-            right: 2rem;
-            top: 60px;
-            height: 0;
-            width: 300px;
-            background: rgba(255, 255, 255, 0.021);
-            backdrop-filter: blur(12px);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 3;
+          display: block;
         }
+      }
 
-        .dropdown_menu.open {
-            height: 240px;
+      @media (max-width: 576px) {
+        .dropdown_menu {
+          left: 2rem;
+          width: unset;
         }
-
-        .dropdown_menu li {
-            padding: 5px 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+      }
+        .read-more{
+          padding: 16px 30px;
         }
-
-        .dropdown_menu .action_btn {
-            width: 100%;
-            display: flex;
-            background-color: rgba(0, 0, 0, 0.536);
-            color: rgb(255, 248, 125);
-            justify-content: center;
-        }
-
-        .dropdown_menu .dd_btn {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            background-color: #ffffff00;
-        }
-
-
-        @media(max-width: 992px) {
-
-            .navbar .links,
-            .navbar .action_btn {
-                display: none;
-            }
-
-            .navbar .toggle_btn {
-                display: block;
-            }
-
-            .dropdown_menu {
-                display: block;
-
-            }
-        }
-
-        @media (max-width: 576px) {
-            .dropdown_menu {
-                left: 2rem;
-                width: unset;
-            }
-        }
-        .event-description{
-            display: none;
-        }
-        .event-card-content{
-            height:180px;
-            align-items: center;
-            text-align: center;
-        }
+      .event-description {
+        display: none;
+      }
+      .event-card-content {
+        height: 180px;
+        align-items: center;
+        text-align: center;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="navbar">
-            <div class="logoDiv"><img src="res/logo.png" alt="logo" class="logo"></div>
-            <ul class="links">
-                <li><a href="/home">Home</a></li>
-                <li><a href="/caportal">CA Portal</a></li>
-                <li><a href="/sponsor">Sponsors</a></li>
-            </ul>
-            <a href="/profile" class="action_btn">Profile</a>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+      <div class="navbar">
+        <div class="logoDiv">
+          <img src="res/logo.png" alt="logo" class="logo" />
         </div>
+        <ul class="links">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/caportal">CA Portal</a></li>
+          <li><a href="/sponsor">Sponsors</a></li>
+        </ul>
+        <a href="/profile" class="action_btn">Profile</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
 
-        <div class="dropdown_menu">
-            <li><a href="/home" class="dd_btn">Home</a></li>
-            <li><a href="/caportal" class="dd_btn">CA Portal</a></li>
-            <li><a href="/sponsor" class="dd_btn">Sponsors</a></li>
-            <li><a href="/profile" class="action_btn">Profile</a></li>
-        </div>
+      <div class="dropdown_menu">
+        <li><a href="/home" class="dd_btn">Home</a></li>
+        <li><a href="/caportal" class="dd_btn">CA Portal</a></li>
+        <li><a href="/sponsor" class="dd_btn">Sponsors</a></li>
+        <li><a href="/profile" class="action_btn">Profile</a></li>
+      </div>
     </header>
 
     <div class="container">
-        <div class="event-card">
-            <img src="res/event/1.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Darpan</h2></div>
-                <div class="event-title"><h3>(Photography)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/photography" class="read-more">Enroll Now!!</a>
-            </div>
+      <div class="event-card">
+        <img src="res/event/1.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Darpan</h2></div>
+          <div class="event-title"><h3>(Photography)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/photography" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/2.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Reel Making</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/reel_making" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/2.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Reel Making</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/reel_making" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/3.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Treasure Hunt</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/treasure_hunt" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/3.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Treasure Hunt</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/treasure_hunt" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/4.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Marketing Mania</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/marketing_mania" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/4.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Marketing Mania</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/marketing_mania" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/5.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Tasveeron ki Dastan</h2></div>
-                <div class="event-title"><h3>(Picture Story)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/picture_story" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/5.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Tasveeron ki Dastan</h2></div>
+          <div class="event-title"><h3>(Picture Story)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/picture_story" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/6.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>One to One Dance Battle</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/one_to_one_dance_battle" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/6.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>One to One Dance Battle</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/one_to_one_dance_battle" class="read-more"
+            >Enroll Now!!</a
+          >
         </div>
-        <div class="event-card">
-            <img src="res/event/7.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Roobaroo</h2></div>
-                <div class="event-title"><h3>(Debate)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/debate" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/7.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Roobaroo</h2></div>
+          <div class="event-title"><h3>(Debate)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/debate" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/8.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Rangmanch</h2></div>
-                <div class="event-title"><h3>(Open Stage)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/open_stage" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/8.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Rangmanch</h2></div>
+          <div class="event-title"><h3>(Open Stage)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/open_stage" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/9.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Sargam</h2></div>
-                <div class="event-title"><h3>(Solo Singing)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/solo_singing" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/9.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Sargam</h2></div>
+          <div class="event-title"><h3>(Solo Singing)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/solo_singing" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/10.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Swarsangam</h2></div>
-                <div class="event-title"><h3>(Band War)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/band_war" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/10.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Swarsangam</h2></div>
+          <div class="event-title"><h3>(Band War)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/band_war" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/11.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Graffiti Extravanza</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/graffiti_extravanza" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/11.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Graffiti Extravanza</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/graffiti_extravanza" class="read-more"
+            >Enroll Now!!</a
+          >
         </div>
-        <div class="event-card">
-            <img src="res/event/12.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Mukhauta</h2></div>
-                <div class="event-title"><h3>(Face Painting)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/face_painting" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/12.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Mukhauta</h2></div>
+          <div class="event-title"><h3>(Face Painting)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/face_painting" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/13.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Ekanki</h2></div>
-                <div class="event-title"><h3>(Monoact)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/monoact" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/13.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Ekanki</h2></div>
+          <div class="event-title"><h3>(Monoact)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/monoact" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/14.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>T-Shirt Painting</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/t_shirt_painting" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/14.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>T-Shirt Painting</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/t_shirt_painting" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/15.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Tehkikat</h2></div>
-                <div class="event-title"><h3>(Case Study)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/case_study" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/15.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Tehkikat</h2></div>
+          <div class="event-title"><h3>(Case Study)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/case_study" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/16.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Pratibimb</h2></div>
-                <div class="event-title"><h3>(Live Sketching)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/live_sketching" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/16.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Pratibimb</h2></div>
+          <div class="event-title"><h3>(Live Sketching)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/live_sketching" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/17.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Mr/Miss Encore</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/mr_ms_encore" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/17.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Mr/Miss Encore</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/mr_ms_encore" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/18.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Rangsaaz</h2></div>
-                <div class="event-title"><h3>(Relay Rangoli)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/relay_rangoli" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/18.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Rangsaaz</h2></div>
+          <div class="event-title"><h3>(Relay Rangoli)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/relay_rangoli" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/19.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Bawaal</h2></div>
-                <div class="event-title"><h3>(Nukkad)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/nukkad" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/19.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Bawaal</h2></div>
+          <div class="event-title"><h3>(Nukkad)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/nukkad" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/20.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Raftaar</h2></div>
-                <div class="event-title"><h3>(Rap Battle)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/one_to_one_rap_battle" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/20.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Raftaar</h2></div>
+          <div class="event-title"><h3>(Rap Battle)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/one_to_one_rap_battle" class="read-more"
+            >Enroll Now!!</a
+          >
         </div>
-        <div class="event-card">
-            <img src="res/event/21.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Kirdaar</h2></div>
-                <div class="event-title"><h3>(Mimicry)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/mimicry" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/21.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Kirdaar</h2></div>
+          <div class="event-title"><h3>(Mimicry)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/mimicry" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/22.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Tamasha</h2></div>
-                <div class="event-title"><h3>(Skit)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/skit" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/22.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Tamasha</h2></div>
+          <div class="event-title"><h3>(Skit)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/skit" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/23.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Natraj</h2></div>
-                <div class="event-title"><h3>(Solo Dance)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/solo_dance" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/23.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Natraj</h2></div>
+          <div class="event-title"><h3>(Solo Dance)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/solo_dance" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/24.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Safarnama</h2></div>
-                <div class="event-title"><h3>(Short Film)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/short_film" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/24.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Safarnama</h2></div>
+          <div class="event-title"><h3>(Short Film)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/short_film" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/25.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Maya Bazaar</h2></div>
-                <div class="event-title"><h3>(Auction)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/auction" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/25.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Maya Bazaar</h2></div>
+          <div class="event-title"><h3>(Auction)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/auction" class="read-more">Enroll Now!!</a>
         </div>
-        <!-- <div class="event-card">
+      </div>
+      <!-- <div class="event-card">
             <img src="res/event/26.jpg" alt="Event 1 Poster">
             <div class="event-card-content">
                 <div class="event-title"><h2>Model United Nations</h2></div>
@@ -527,124 +687,167 @@
                 <a href="/events/model_united_nations" class="read-more">Enroll Now!!</a>
             </div>
         </div> -->
-        <div class="event-card">
-            <img src="res/event/27.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Afsane</h2></div>
-                <div class="event-title"><h3>(Twist a Tale)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/twist_a_tale" class="read-more">Enroll Now!!</a>
-            </div>
+      <div class="event-card">
+        <img src="res/event/27.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Afsane</h2></div>
+          <div class="event-title"><h3>(Twist a Tale)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/twist_a_tale" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/28.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Raqs</h2></div>
-                <div class="event-title"><h3>(Group Dance)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/group_dance" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/28.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Raqs</h2></div>
+          <div class="event-title"><h3>(Group Dance)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/group_dance" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/29.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Jumla</h2></div>
-                <div class="event-title"><h3>(JAM)</h3></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="/events/jam" class="read-more">Enroll Now!!</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/29.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Jumla</h2></div>
+          <div class="event-title"><h3>(JAM)</h3></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="/events/jam" class="read-more">Enroll Now!!</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/30.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Puzzle</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="" class="read-more">On spot Reg.</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/30.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Puzzle</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="" class="read-more">On spot Reg.</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/31.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>E-games</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="" class="read-more">On spot Reg.</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/31.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>E-games</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="" class="read-more">On spot Reg.</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/32.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Tic Tac Toe</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="" class="read-more">On spot Reg.</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/32.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Tic Tac Toe</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="" class="read-more">On spot Reg.</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/33.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Human Ludo</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="" class="read-more">On spot Reg.</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/33.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Human Ludo</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="" class="read-more">On spot Reg.</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/34.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Best Out of Waste</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="" class="read-more">On spot Reg.</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/34.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Best Out of Waste</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="" class="read-more">On spot Reg.</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/35.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Roadies</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="" class="read-more">On spot Reg.</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/35.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Roadies</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="" class="read-more">On spot Reg.</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/36.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Gully Cricket</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="" class="read-more">On spot Reg.</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/36.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Gully Cricket</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="" class="read-more">On spot Reg.</a>
         </div>
-        <div class="event-card">
-            <img src="res/event/37.jpg" alt="Event 1 Poster">
-            <div class="event-card-content">
-                <div class="event-title"><h2>Dumb Charades</h2></div>
-                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
-                <a href="" class="read-more">On spot Reg.</a>
-            </div>
+      </div>
+      <div class="event-card">
+        <img src="res/event/37.jpg" alt="Event 1 Poster" />
+        <div class="event-card-content">
+          <div class="event-title"><h2>Dumb Charades</h2></div>
+          <div class="event-description">
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h3>
+          </div>
+          <a href="" class="read-more">On spot Reg.</a>
         </div>
-        
+      </div>
 
-
-        <!-- Add more event cards here -->
-
+      <!-- Add more event cards here -->
     </div>
-    <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/536b7f8348.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
-        const toggleBtn = document.querySelector('.toggle_btn')
-        const toggleBtnTcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnTcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
 
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open')
-        }
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+      };
     </script>
-</body>
-
+  </body>
 </html>
