@@ -3,7 +3,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 const collection = require("./DB");
 const path = require("path");
-var favicon = require('serve-favicon');
+var favicon = require("serve-favicon");
 const cookieParser = require("cookie-parser");
 const sendMail = require("./mail");
 
@@ -14,7 +14,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 app.use(cookieParser());
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -154,6 +154,9 @@ app.post("/signup", async (req, res) => {
   if (foundUser) {
     res.render("signup", { alreadyRegistered: true });
   } else {
+    let regDate = new Date().toLocaleString("en-Us", {
+      timeZone: "Asia/Kolkata",
+    });
     const user = new collection({
       name,
       college,
@@ -164,6 +167,7 @@ app.post("/signup", async (req, res) => {
       email,
       password,
       confpassword,
+      regDate,
     });
     await user.save();
     sendMail(name, email);

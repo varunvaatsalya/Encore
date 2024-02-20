@@ -45,11 +45,15 @@ const login = new mongoose.Schema({
     type: String,
     required: true,
   },
+  regDate:{
+    type: String,
+    required: true,
+  },
   events: [
     {
       type: String,
     },
-  ],
+  ]
 });
 
 const collection = new mongoose.model("users", login);
