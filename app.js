@@ -20,8 +20,43 @@ app.use(
     extended: true,
   })
 );
-
 let PORT = process.env.PORT;
+
+function correctEventArrayFunc(eventArray) {
+  let events = {
+    photography: "Darpan (Photography)",
+    reel_making: "Reel Making",
+    treasure_hunt: "Treasure Hunt",
+    marketing_mania: "Marketing Mania",
+    picture_story: "Tasveeron ki Dastan (Picture Story)",
+    one_to_one_dance_battle: "One to One Dance Battle",
+    debate: "Roobaroo (Debate)",
+    open_stage: "Rangmanch (Open Stage)",
+    solo_singing: "Sargam (Solo Singing)",
+    band_war: "Swarsangam (Band War)",
+    graffiti_extravanza: "Graffiti Extravanza",
+    face_painting: "Mukhauta (Face Painting)",
+    monoact: "Ekanki (Monoact)",
+    t_shirt_painting: "T-Shirt Painting",
+    case_study: "Tehkikat (Case Study)",
+    live_sketching: "Pratibimb (Live Sketching)",
+    mr_ms_encore: "Mr & Miss Encore",
+    relay_rangoli: "Rangsaaz (Relay Rangoli)",
+    nukkad: "Bawaal (Nukkad)",
+    one_to_one_rap_battle: "Raftaar (Rap Battle)",
+    mimicry: "Kirdaar (Mimicry)",
+    skit: "Tamasha (Skit)",
+    solo_dance: "Natraj (Solo Dance)",
+    short_film: "Safarnama (Short Film)",
+    auction: "Maya Bazaar (Auction)",
+    twist_a_tale: "Afsane (Twist a Tale)",
+    group_dance: "Raqs (Group Dance)",
+    jam: "Jumla (Jam)",
+  };
+
+  return eventArray.map((key) => events[key]);
+}
+
 async function insertEvent(eventName, cookieId) {
   let foundUser = await collection.findOne({ _id: cookieId });
   let events = foundUser.events;
@@ -90,7 +125,7 @@ app.get("/profile", async (req, res) => {
   }
   if (foundUser) {
     let refcode = "College Student";
-    if (foundUser.refcode) refcode = "campus Ambassador";
+    if (foundUser.refcode) refcode = `referal code : ${foundUser.refcode}`;
     res.render("profile.ejs", {
       name: foundUser.name,
       age: foundUser.age,
@@ -98,7 +133,7 @@ app.get("/profile", async (req, res) => {
       contact: foundUser.contact,
       college: foundUser.college,
       Ambassador: refcode,
-      events: foundUser.events,
+      events: correctEventArrayFunc(foundUser.events),
     });
   } else {
     res.render("login");
