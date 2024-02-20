@@ -146,7 +146,7 @@ app.get("/logout", (req, res) => {
 });
 
 app.get("/signup", (req, res) => {
-  res.render("signup.ejs", { alreadyRegistered: false });
+  res.render("signup.ejs", { alreadyRegistered: false, paaswordFalse: false });
 });
 
 app.get("/events", (req, res) => {
@@ -184,30 +184,34 @@ app.post("/signup", async (req, res) => {
     password,
     confpassword,
   } = req.body;
-  console.log(email, name);
-  let foundUser = await collection.findOne({ email: email });
-  if (foundUser) {
-    res.render("signup", { alreadyRegistered: true });
+  // console.log(email, name);
+  if (password !== confpassword) {
+    res.render("signup", { paaswordFalse: true, alreadyRegistered: false });
   } else {
-    let regDate = new Date().toLocaleString("en-Us", {
-      timeZone: "Asia/Kolkata",
-    });
-    const user = new collection({
-      name,
-      college,
-      year,
-      age,
-      refcode,
-      contact,
-      email,
-      password,
-      confpassword,
-      regDate,
-    });
-    await user.save();
-    sendMail(name, email);
-    res.cookie("uid", user._id);
-    res.render("after-reg");
+    let foundUser = await collection.findOne({ email: email });
+    if (foundUser) {
+      res.render("signup", { alreadyRegistered: true, paaswordFalse: false });
+    } else {
+      let regDate = new Date().toLocaleString("en-Us", {
+        timeZone: "Asia/Kolkata",
+      });
+      const user = new collection({
+        name,
+        college,
+        year,
+        age,
+        refcode,
+        contact,
+        email,
+        password,
+        confpassword,
+        regDate,
+      });
+      await user.save();
+      sendMail(name, email);
+      res.cookie("uid", user._id);
+      res.render("after-reg");
+    }
   }
 });
 

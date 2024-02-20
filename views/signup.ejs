@@ -257,7 +257,7 @@
             margin-bottom: 0;
         }
         .messege{
-            color: red;
+            color: rgb(250, 13, 13);
             width: 100%;
             text-align: center;
         }
@@ -388,11 +388,12 @@
             <div class="inputcontainer">
                 <div class="terms">
                     <input type="checkbox" id="t&c" name="t&c" class="t&c" value="t&c" required>
-                    <label for="t&c">I agreed the <a class="link" href="https://drive.google.com/file/d/1wN5fDS2S16HnUaCix3bN2yXtdGkq2iwt/view?usp=sharing" target="_blank">terms and condition</a></label><br>
+                    <label for="t&c">I agree to the <a class="link" href="https://drive.google.com/file/d/1mAImGyP-uY53cv3GCOttHxIWTfD-ZyKQ/view?usp=sharing" target="_blank">terms and condition</a></label><br>
                 </div>
             </div>
             
             <div class="messege">this email is already registered</div>
+            <div class="messege bgwhite">Enter the same Password</div>
             <div class="register">
                 <button type="submit" class="regButton">Register!</button>
             </div>
@@ -401,11 +402,18 @@
     <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
     <script>
         let isRegistered = '<%=alreadyRegistered%>';
+        let isPasswordNotSame = '<%=paaswordFalse%>';
         if(isRegistered=='true'){
             document.getElementsByClassName('messege')[0].style.display = 'block';
         }
         else{
             document.getElementsByClassName('messege')[0].style.display = 'none';
+        }
+        if(isPasswordNotSame=='true'){
+            document.getElementsByClassName('messege')[1].style.display = 'block';
+        }
+        else{
+            document.getElementsByClassName('messege')[1].style.display = 'none';
         }
     
         const toggleBtn = document.querySelector('.toggle_btn')
