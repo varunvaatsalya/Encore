@@ -88,7 +88,7 @@ app.get("/enrolling/:name", async (req, res) => {
     await insertEvent(eventName, cookieId);
     res.render(eventName, { BtnName: "Registered" });
   } else {
-    res.render("login");
+    res.redirect("/login");
   }
 });
 
