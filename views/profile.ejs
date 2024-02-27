@@ -2,393 +2,426 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
-    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Charm&family=Leckerli+One&family=Open+Sans:wght@300&family=Satisfy&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Charm&family=Leckerli+One&family=Open+Sans:wght@300&family=Satisfy&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-        body {
-            font-family: "Marhey", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 300;
-            margin: 0;
-            padding: 0;
-            background-image: url(res/bg.jpg);
-            position: relative;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            min-height: 100vh;
-            background-position: center;
-            color: #fff;
-        }
+    body {
+      font-family: "Marhey", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+      background-image: url(res/bg.jpg);
+      position: relative;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100vh;
+      background-position: center;
+      color: #fff;
+    }
 
-        .social-box {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            background: #3964ff;
-            text-align: center;
-            border-radius: 3px;
-        }
+    .social-box {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      background: #3964ff;
+      text-align: center;
+      border-radius: 3px;
+    }
 
-        .social-box .fa {
-            margin: 5px;
-            color: #fff;
-            cursor: pointer;
-        }
+    .social-box .fa {
+      margin: 5px;
+      color: #fff;
+      cursor: pointer;
+    }
 
-        header {
-            background-color: #0000006c;
-            font-family: "Marhey", sans-serif;
-        }
+    header {
+      background-color: #0000006c;
+      font-family: "Marhey", sans-serif;
+    }
 
-        .logoDiv {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px;
-        }
+    .logoDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+    }
 
-        .logo {
-            max-width: 150px;
-        }
+    .logo {
+      max-width: 150px;
+    }
 
-        header li {
-            list-style: none;
-            font-size: 1.2rem;
-            font-family: var(--main-font);
-        }
+    header li {
+      list-style: none;
+      font-size: 1.2rem;
+      font-family: var(--main-font);
+    }
 
-        header a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2rem;
-            padding: 0.5rem 1rem;
-            border: none;
-            outline: none;
-            border-radius: 20px;
-        }
+    header a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+    }
 
-        a:hover {
-            color: orange;
-        }
+    a:hover {
+      color: orange;
+    }
 
-        header {
-            position: relative;
-            padding: 0 2rem;
-        }
+    header {
+      position: relative;
+      padding: 0 2rem;
+    }
 
-        .navbar {
-            width: 100%;
-            height: 75px;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    .navbar {
+      width: 100%;
+      height: 75px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        .navbar .links {
-            display: flex;
-            gap: 2rem;
-        }
+    .navbar .links {
+      display: flex;
+      gap: 2rem;
+    }
 
-        .navbar .toggle_btn {
-            color: #fff;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: none;
-        }
+    .navbar .toggle_btn {
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+    }
 
-        .action_btn {
-            background-color: rgba(0, 0, 0, 0.273);
-            color: rgb(255, 248, 125);
-            padding: 0.5rem 1rem;
-            border: none;
-            outline: none;
-            border-radius: 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
+    .action_btn {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: rgb(255, 248, 125);
+      padding: 0.75rem 1.5rem;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-        .action_btn:hover {
-            scale: 1.05;
-            color: #fff;
-        }
+    .action_btn:hover {
+      scale: 1.05;
+      color: #fff;
+    }
 
-        .action_btn:active {
-            scale: 0.95;
-        }
+    .action_btn:active {
+      scale: 0.95;
+    }
 
-        .dropdown_menu {
-            display: none;
-            position: absolute;
-            right: 2rem;
-            top: 60px;
-            height: 0;
-            width: 300px;
-            background: rgba(0, 0, 0, 0.321);
-            backdrop-filter: blur(12px);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 3;
-        }
+    .dropdown_menu {
+      display: none;
+      position: absolute;
+      right: 2rem;
+      top: 60px;
+      height: 0;
+      width: 300px;
+      background: rgba(0, 0, 0, 0.321);
+      backdrop-filter: blur(12px);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 3;
+    }
 
-        .dropdown_menu.open {
-            height: 240px;
-        }
+    .dropdown_menu.open {
+      height: 240px;
+    }
 
-        .dropdown_menu li {
-            padding: 5px 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .dropdown_menu li {
+      padding: 5px 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .dropdown_menu .action_btn {
-            width: 100%;
-            display: flex;
-            background-color: rgba(0, 0, 0, 0.536);
-            color: rgb(255, 248, 125);
-            justify-content: center;
-        }
+    .dropdown_menu .action_btn {
+      width: 100%;
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.536);
+      color: rgb(255, 248, 125);
+      justify-content: center;
+    }
 
-        .dropdown_menu .dd_btn {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            background-color: #ffffff00;
-        }
+    .dropdown_menu .dd_btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: #ffffff00;
+    }
 
-        .container {
-            margin: 50px auto;
-            max-width: 95vw;
-            background-color: rgba(0, 0, 0, 0.286);
-            padding-bottom: 1px;
-            border-radius: 14px;
-        }
+    .container {
+      margin: 50px auto;
+      max-width: 95vw;
+      background-color: rgba(0, 0, 0, 0.286);
+      padding-bottom: 1px;
+      border-radius: 14px;
+    }
 
-        .upper {
-            display: flex;
-            flex: 1;
-        }
+    .upper {
+      display: flex;
+      flex: 1;
+    }
 
-        .lower {
-            padding: 15px;
-            background-color: rgba(0, 0, 0, 0.612);
-            margin: 20px;
-            border-radius: 12px;
-            text-align: center;
-        }
-        .lower ul, .right ul, .left ul{
-            list-style: none;
-            padding: 0;
-        }
+    .lower {
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.612);
+      margin: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
 
-        .left {
-            flex: 1;
-            margin: 20px 10px 0px 20px;
-            padding: 15px;
-            background-color: rgba(0, 0, 0, 0.612);
-            border-radius: 12px;
-        }
+    .lower ul,
+    .right ul,
+    .left ul {
+      list-style: none;
+      padding: 0;
+    }
 
-        .right {
-            flex: 1;
-            margin: 20px 20px 0px 10px;
-            padding: 15px;
-            background-color: rgba(0, 0, 0, 0.612);
-            border-radius: 12px;
-            text-align: center;
-        }
+    .left {
+      flex: 1;
+      margin: 20px 10px 0px 20px;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.612);
+      border-radius: 12px;
+    }
 
-        .sub-left {
-            display: flex;
-            flex: 1;
-        }
+    .right {
+      flex: 1;
+      margin: 20px 20px 0px 10px;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.612);
+      border-radius: 12px;
+      text-align: center;
+    }
 
-        .profile {
-            flex: 1;
-        }
+    .sub-left {
+      display: flex;
+      flex: 1;
+    }
 
-        .details {
-            flex: 1;
-            text-align: center;
-        }
+    .profile {
+      flex: 1;
+    }
 
-        .profile img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 20px;
-        }
+    .details {
+      flex: 1;
+      text-align: center;
+    }
 
-        @media(max-width: 992px) {
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 20px;
+    }
 
-            .navbar .links,
-            .navbar .action_btn {
-                display: none;
-            }
+    .payment {
+        text-decoration: none;
+        
+    }
+    .payment-section{
+        margin: 25px auto;
+        max-width: 90vw;
+        display: flex;
+        justify-content: center;
+    }
+    .warning{
+        background-color: rgba(0, 0, 0, 0.612);
+        color: red;
+        text-align: center;
+    }
 
-            .navbar .toggle_btn {
-                display: block;
-            }
+    @media(max-width: 992px) {
 
-            .dropdown_menu {
-                display: block;
+      .navbar .links,
+      .navbar .action_btn {
+        display: none;
+      }
 
-            }
+      .navbar .toggle_btn {
+        display: block;
+      }
 
-            .upper {
-                display: block;
-            }
+      .dropdown_menu {
+        display: block;
 
-            .right {
-                margin: 20px 20px 0px 20px;
-            }
+      }
 
-            .left {
-                margin: 20px 20px 20px 20px;
-            }
+      .upper {
+        display: block;
+      }
 
-            .container {
-                padding-top: 1px;
-            }
+      .right {
+        margin: 20px 20px 0px 20px;
+      }
 
-            .sub-left {
-                display: block;
-                text-align: center;
-            }
+      .left {
+        margin: 20px 20px 20px 20px;
+      }
 
-            .details ul {
-                list-style: none;
-                padding: 0;
-            }
+      .container {
+        padding-top: 1px;
+      }
 
-            .profile img {
-                margin: 20px auto;
-            }
-        }
+      .sub-left {
+        display: block;
+        text-align: center;
+      }
 
-        @media (max-width: 576px) {
-            .dropdown_menu {
-                left: 2rem;
-                width: unset;
-            }
-        }
-        .lower h2{
-            font-size: 21px;
-        }
-    </style>
+      .details ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .profile img {
+        margin: 20px auto;
+      }
+
+    }
+
+
+    @media (max-width: 576px) {
+      .dropdown_menu {
+        left: 2rem;
+        width: unset;
+      }
+    }
+
+    .lower h2 {
+      font-size: 21px;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logoDiv"><img src="res/logo.png" alt="logo" class="logo"></div>
-            <ul class="links">
-                <li><a href="/home">Home</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/sponsor">Sponsors</a></li>
-                <li><a href="/logout">Logout</a></li>
-                
-            </ul>
-           
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
+  <header>
+    <div class="navbar">
+      <div class="logoDiv"><img src="res/logo.png" alt="logo" class="logo"></div>
+      <ul class="links">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/sponsor">Sponsors</a></li>
+        <li><a href="/logout">Logout</a></li>
 
-        <div class="dropdown_menu">
-            <li><a href="/home" class="dd_btn">Home</a></li>
-            <li><a href="/events" class="dd_btn">Events</a></li>
-            <li><a href="/sponsor" class="dd_btn">Sponsors</a></li>
-            <li><a href="/logout" class="dd_btn">Logout</a></li>
-        </div>
-    </header>
+      </ul>
 
-    <div class="container">
-        <div class="upper">
-            <div class="left">
-                <div class="sub-left">
-                    <!--
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="/home" class="dd_btn">Home</a></li>
+      <li><a href="/events" class="dd_btn">Events</a></li>
+      <li><a href="/sponsor" class="dd_btn">Sponsors</a></li>
+      <li><a href="/logout" class="dd_btn">Logout</a></li>
+    </div>
+  </header>
+
+  <div class="payment-section">
+    <div class="payment action_btn"><button onclick="popup('encore24-301243');" class="tsbutton">
+        Pay Now
+      </button>
+      <noscript id="tsNoJsMsg"
+        >Javascript on your browser is not enabled.</noscript
+      >
+      <script
+        src="https://www.townscript.com/static/Bookingflow/js/townscript-widget.nocache.js"
+        type="text/javascript"
+      ></script></div>
+  </div>
+  <div class="warning">The status of payment completion will be displayed after verification by our team and kindly ensure that email is filled accurately</div>
+
+  <div class="container">
+    <div class="upper">
+      <div class="left">
+        <div class="sub-left">
+          <!--
                     <div class="profile">
                         <img src="res/profilePhotos/" alt="">
                     </div>
                     -->
-                    <div class="details">
-                        <h2>Personal Details</h2>
-                        <ul>
-                            <li><%=name%></li>
-                            <li>age : <%=age%></li>
-                            <li><%=email%></li>
-                            <li><%=contact%></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="right">
-                <h2>College Details</h2>
-                <ul>
-                    <li><%=college%></li>
-                    <li><%=Ambassador%></li>
-                </ul>
-            </div>
+          <div class="details">
+            <h2>Personal Details</h2>
+            <ul>
+              <li><%=name%></li>
+              <li>age : <%=age%></li>
+              <li><%=email%></li>
+              <li><%=contact%></li>
+            </ul>
+          </div>
         </div>
-        <div class="lower">
-            <h2>Events you've enrolled in</h2>
-            <ul id="eventList"></ul>
-        </div>
+      </div>
+      <div class="right">
+        <h2>College Details</h2>
+        <ul>
+          <li><%=college%></li>
+          <li><%=Ambassador%></li>
+        </ul>
+      </div>
     </div>
+    <div class="lower">
+      <h2>Events you've enrolled in</h2>
+      <ul id="eventList"></ul>
+    </div>
+  </div>
 
-    <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
-    <script>
-
-let eventListElement = document.getElementById('eventList');
-let events = '<%=events%>';
- events = events.split(",");
-        for(let i=0; i<events.length; i++){
-            let listItem = document.createElement('li');
-          let textnode = document.createTextNode(events[i]);
-          listItem.appendChild(textnode);
-          eventListElement.appendChild(listItem);
-        }
-
+  <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
+  <script>
+    let eventListElement = document.getElementById('eventList');
+    let events = '<%=events%>';
+    events = events.split(",");
+    for (let i = 0; i < events.length; i++) {
+      let listItem = document.createElement('li');
+      let textnode = document.createTextNode(events[i]);
+      listItem.appendChild(textnode);
+      eventListElement.appendChild(listItem);
+    }
 
 
-        const toggleBtn = document.querySelector('.toggle_btn')
-        const toggleBtnTcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
 
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open')
-        }
-    </script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnTcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
 
-    <!-- <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
+    toggleBtn.onclick = function() {
+      dropDownMenu.classList.toggle('open')
+    }
+  </script>
+
+  <!-- <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
     <script>
         const toggleBtn = document.querySelector('.toggle_btn')
         toggleBtn.onclick = function () {
             dropDownMenu.classList.toggle('open')
         }
     </script> -->
-    </header>
+  </header>
 
-    
+
 </body>
 
 </html>
