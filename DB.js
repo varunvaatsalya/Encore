@@ -45,6 +45,9 @@ const login = new mongoose.Schema({
     type: String,
     required: true,
   },
+  payment: {
+    type: String,
+  },
   regDate:{
     type: String,
     required: true,

@@ -125,6 +125,10 @@ app.get("/profile", async (req, res) => {
   }
   if (foundUser) {
     let refcode = "College Student";
+    let payment;
+    if(foundUser.payment == "non-acco") payment = "Payment Done with non-accommodation";
+    else if(foundUser.payment == "acco") payment = "Payment Done with accommodation";
+    else payment = "Payment Due";
     if (foundUser.refcode) refcode = `referal code : ${foundUser.refcode}`;
     res.render("profile.ejs", {
       name: foundUser.name,
@@ -132,9 +136,23 @@ app.get("/profile", async (req, res) => {
       email: foundUser.email,
       contact: foundUser.contact,
       college: foundUser.college,
+      payment: payment,
       Ambassador: refcode,
       events: correctEventArrayFunc(foundUser.events),
     });
+  } else {
+    res.render("login");
+  }
+});
+
+app.get("/payment", async (req, res) => {
+  let cookieId = req.cookies.uid;
+  let foundUser;
+  if (cookieId) {
+    foundUser = await collection.findOne({ _id: cookieId });
+  }
+  if (foundUser) {
+    res.render("payment.ejs");
   } else {
     res.render("login");
   }
