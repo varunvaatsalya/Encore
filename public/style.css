@@ -525,3 +525,24 @@ footer a {
 .enrollbutton {
     padding-top: 60px;
 }
+.aboutText{
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-end: 350px;
+  }
+  
+  @keyframes fade-in{
+    from{scale:.8; opacity: 0;}
+    to{scale:1; opacity: 1;}
+  }
+  .titleImg{
+    animation: fade-in-logo ease-in-out;
+    animation-duration: 750ms;
+  }
+  @keyframes fade-in-logo{
+    0%{scale:.4; opacity: 0;}
+    50%{scale:1.2; opacity: .5;}
+    70%{scale:.8; opacity: .7;}
+    90%{scale:1.1; opacity: .9;}
+    100%{scale:1; opacity: 1;}
+  }
