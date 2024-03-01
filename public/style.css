@@ -46,6 +46,10 @@ body {
     min-height: 100vh;
     background-position: center;
 }
+.blackbg{
+    background-color: rgba(0, 0, 0, .5);
+    min-height: 100vh;
+}
 
 .parallax2 {
     background-image: url("res/background/bg2.jpg");
