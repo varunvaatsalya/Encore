@@ -6,7 +6,7 @@ async function sendMail(name, email) {
     service: "gmail",
     auth: {
       user: "encore@ietlucknow.ac.in",  //encore email
-      pass: "mofvhrfzjolnsvub",  //generated password
+      pass: process.env.ENCORE_PASSWORD,  //generated password
     },
   });
 
