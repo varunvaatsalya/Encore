@@ -60,7 +60,10 @@ Information about the sponsors who are supporting the Encore festival. This sect
 
 ## Register Page
 
-![signup Page](./images/signup.jpg)
+<!-- ![signup Page](./images/signup.jpg) -->
+<div style="text-align: center;">
+  <img src="./images/signup.png" alt="Home Page" height="300">
+</div>
 
 This is the Signup page where users have to fill in their and their college details before registering their events.
 
