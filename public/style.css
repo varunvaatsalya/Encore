@@ -14,11 +14,12 @@ font-family: "Marhey", sans-serif;
 font-family: "Montserrat", sans-serif;
 */
 
-:root{
+:root {
     --main-font: "Marhey", sans-serif;
     --main-weight-btn: 500;
     --main-weight-a: 500;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +47,8 @@ body {
     min-height: 100vh;
     background-position: center;
 }
-.blackbg{
+
+.blackbg {
     background-color: rgba(0, 0, 0, .5);
     min-height: 100vh;
 }
@@ -70,7 +72,7 @@ body {
 /*header start*/
 
 header {
-    
+
     z-index: 1;
     background-color: #0000006c;
 }
@@ -80,6 +82,8 @@ header {
     justify-content: center;
     align-items: center;
     height: 200px;
+    clip-path: inset(0 0 0 50%);
+    overflow: hidden;
 }
 
 .logo {
@@ -116,7 +120,6 @@ header {
 .navbar {
     width: 100%;
     height: 75px;
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -145,6 +148,7 @@ header {
     border-radius: 20px;
     font-size: 1.2rem;
     font-weight: bold;
+    margin-right: 8rem;
     cursor: pointer;
 }
 
@@ -189,6 +193,7 @@ header {
     background-color: rgba(0, 0, 0, 0.536);
     color: rgb(255, 248, 125);
     justify-content: center;
+    margin-right: 0rem;
 }
 
 .dropdown_menu .dd_btn {
@@ -220,6 +225,9 @@ header {
     .dropdown_menu {
         left: 2rem;
         width: unset;
+    }
+    .logoDiv{
+        margin-left: -60px;
     }
 }
 
@@ -406,7 +414,7 @@ header {
     height: 53vmin;
 }
 
-.f-slides{
+.f-slides {
     border-radius: 20px;
     box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.411);
 }
@@ -525,24 +533,53 @@ footer a {
 .enrollbutton {
     padding-top: 60px;
 }
-.aboutText{
+
+.aboutText {
     animation: fade-in linear;
     animation-timeline: view();
     animation-range-end: 350px;
-  }
-  
-  @keyframes fade-in{
-    from{scale:.8; opacity: 0;}
-    to{scale:1; opacity: 1;}
-  }
-  .titleImg{
+}
+
+@keyframes fade-in {
+    from {
+        scale: .8;
+        opacity: 0;
+    }
+
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.titleImg {
     animation: fade-in-logo ease-in-out;
     animation-duration: 750ms;
-  }
-  @keyframes fade-in-logo{
-    0%{scale:.4; opacity: 0;}
-    50%{scale:1.2; opacity: .5;}
-    70%{scale:.8; opacity: .7;}
-    90%{scale:1.1; opacity: .9;}
-    100%{scale:1; opacity: 1;}
-  }
+}
+
+@keyframes fade-in-logo {
+    0% {
+        scale: .4;
+        opacity: 0;
+    }
+
+    50% {
+        scale: 1.2;
+        opacity: .5;
+    }
+
+    70% {
+        scale: .8;
+        opacity: .7;
+    }
+
+    90% {
+        scale: 1.1;
+        opacity: .9;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
