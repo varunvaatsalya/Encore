@@ -190,19 +190,26 @@ app.get("/caportal", (req, res) => {
 
 app.get("/encoreUsers", async (req, res) => {
   let { passkey } = req.query;
+  
   if (!passkey || passkey !== process.env.PASSKEY) {
-    res.status(404).json({ success: false, message: "Invalid Request" });
+    return res.status(404).json({ success: false, message: "Invalid Request" });
   }
-  if (passkey === process.env.PASSKEY) {
+
+  try {
     let users = await collection.find({}, { password: 0, confpassword: 0 });
     const totalUsers = await collection.countDocuments();
+    
     users = users.map((user) => {
       user.events = correctEventArrayFunc(user.events);
       return user;
     });
-    res.status(200).json({ success: true, data: {users,totalUsers} });
-  } else res.status(404).json({ success: false, message: "Invalid Request" });
+
+    res.status(200).json({ success: true, data: { users, totalUsers } });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Server Error" });
+  }
 });
+
 
 app.post("/signup", async (req, res) => {
   const {
