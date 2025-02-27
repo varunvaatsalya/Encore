@@ -5,9 +5,12 @@ const collection = require("./DB");
 const path = require("path");
 var favicon = require("serve-favicon");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 const sendMail = require("./mail");
 
 const app = express();
+
+app.use(cors());
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -54,7 +57,7 @@ function correctEventArrayFunc(eventArray) {
     jam: "Jumla (Jam)",
   };
 
-  return eventArray.map((key) => events[key]);
+  return eventArray ? eventArray.map((key) => events[key]) : [];
 }
 
 async function insertEvent(eventName, cookieId) {
@@ -126,8 +129,10 @@ app.get("/profile", async (req, res) => {
   if (foundUser) {
     let refcode = "College Student";
     let payment;
-    if(foundUser.payment == "non-acco") payment = "Payment Done with non-accommodation";
-    else if(foundUser.payment == "acco") payment = "Payment Done with accommodation";
+    if (foundUser.payment == "non-acco")
+      payment = "Payment Done with non-accommodation";
+    else if (foundUser.payment == "acco")
+      payment = "Payment Done with accommodation";
     else payment = "Payment Due";
     if (foundUser.refcode) refcode = `referal code : ${foundUser.refcode}`;
     res.render("profile.ejs", {
@@ -183,12 +188,21 @@ app.get("/caportal", (req, res) => {
   res.render("caportal.ejs");
 });
 
-// app.get("/photography", async (req, res) => {
-//   let eventName = "photography";
-//   let cookieId = req.cookies.uid;
-//   let isEnroll = await isEventEnroll(eventName, cookieId);
-//   res.render("photography.ejs", { BtnName: isEnroll });
-// });
+app.get("/encoreUsers", async (req, res) => {
+  let { passkey } = req.query;
+  if (!passkey || passkey !== process.env.PASSKEY) {
+    res.status(404).json({ success: false, message: "Invalid Request" });
+  }
+  if (passkey === process.env.PASSKEY) {
+    let users = await collection.find({}, { password: 0, confpassword: 0 });
+    const totalUsers = await collection.countDocuments();
+    users = users.map((user) => {
+      user.events = correctEventArrayFunc(user.events);
+      return user;
+    });
+    res.status(200).json({ success: true, data: {users,totalUsers} });
+  } else res.status(404).json({ success: false, message: "Invalid Request" });
+});
 
 app.post("/signup", async (req, res) => {
   const {
