@@ -59,6 +59,13 @@ const login = new mongoose.Schema({
   ]
 });
 
+const body = new mongoose.Schema({
+  data: {
+    type: String,
+  },
+});
+
+const confirms = new mongoose.model("confirms", body);
 const collection = new mongoose.model("users", login);
 
-module.exports = collection;
+module.exports = {collection,confirms};

@@ -1,7 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
-const collection = require("./DB");
+const { collection, confirms } = require("./DB");
 const path = require("path");
 var favicon = require("serve-favicon");
 const cookieParser = require("cookie-parser");
@@ -190,7 +190,7 @@ app.get("/caportal", (req, res) => {
 
 app.get("/encoreUsers", async (req, res) => {
   let { passkey } = req.query;
-  
+
   if (!passkey || passkey !== process.env.PASSKEY) {
     return res.status(404).json({ success: false, message: "Invalid Request" });
   }
@@ -198,7 +198,7 @@ app.get("/encoreUsers", async (req, res) => {
   try {
     let users = await collection.find({}, { password: 0, confpassword: 0 });
     const totalUsers = await collection.countDocuments();
-    
+
     users = users.map((user) => {
       user.events = correctEventArrayFunc(user.events);
       return user;
@@ -210,6 +210,15 @@ app.get("/encoreUsers", async (req, res) => {
   }
 });
 
+app.post("/25encore-ticket-confirmation-from-townscript", async (req, res) => {
+  const body = req.body;
+  console.log("data:" + JSON.stringify(body));
+  const confirm = new confirms({
+    data: body ? JSON.stringify(body) : "no data",
+  });
+  await confirm.save();
+  res.status(200).json({ message: "successful" });
+});
 
 app.post("/signup", async (req, res) => {
   const {
